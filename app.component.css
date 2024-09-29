@@ -1,0 +1,24 @@
+.initial-container {
+  padding: 20px;
+}
+.header h1 {
+  font-size: 25px;
+  color: #dcb37c;
+  margin-bottom: 20px;
+}
+.calculator-form {
+  width: 100%; 
+  max-width: 400px; 
+}
+.error-message {
+  color: red; 
+}
+::ng-deep .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+  top: 7px !important;
+}
+.submit-button{
+  cursor: pointer !important;
+  color: white !important;
+  background-color: #dcb37c !important;
+  padding: 10px !important;
+}
