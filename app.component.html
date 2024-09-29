@@ -1,0 +1,28 @@
+<div class="initial-container">
+  <div fxLayoutAlign="center" class="header">
+    <h1>String Calculator</h1>
+  </div>
+  
+  <form [formGroup]="calculatorForm" class="calculator-form">
+    <div fxLayout="column">
+      <mat-form-field>
+        <mat-label>Enter the string</mat-label>
+        <input type="text" matInput formControlName="stringControl" placeholder="Example: 1,2,3" />
+        <mat-error *ngIf="calculatorForm?.get('stringControl')?.errors?.['required']" class="error-message">
+          This field is required.
+        </mat-error>
+      </mat-form-field>
+      <div fxLayoutAlign="start">
+        <button mat-flat-button class="submit-button" type="submit" (click)="onSubmit()">Save</button>
+      </div>
+    </div>
+  </form>
+
+  <div *ngIf="result !== null">
+    <p>Output: {{ result }}</p>
+  </div>
+
+  <div *ngIf="errorMessage">
+    <p class="error-message">{{ errorMessage }}</p>
+  </div>
+</div>
